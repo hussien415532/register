@@ -1,0 +1,23 @@
+<form class="m-auto mt-5 d-flex justify-content-center align-content-center flex-column w-md-50" [formGroup]="signup" (ngSubmit)="submitForm()">
+  <mat-form-field class=" m-auto w-100" appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Ex. Hussein" type="text" formControlName="firstName"/>
+  </mat-form-field>
+  <mat-form-field class=" m-auto w-100" appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Ex. Hassan" type="text" formControlName="lastName"/>
+  </mat-form-field>
+  <mat-form-field class=" m-auto w-100" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ex. hussien415542@gmail.com" type="email" formControlName="email"/>
+  </mat-form-field>
+  <mat-form-field class="m-auto w-100" appearance="outline">
+    <mat-label>password</mat-label>
+    <input matInput type="password" formControlName="password" #ref1/>
+  </mat-form-field>
+ 
+  <div class="d-flex align-content-center">
+    <button type="submit" mat-raised-button color="primary" [disabled]="!signup.valid" class="w-25">Sign Up</button>
+    <p class="m-0 p-2">already have account <a routerLink="/login">login</a></p>
+  </div>
+</form>

@@ -1,0 +1,14 @@
+<form class="m-auto mt-5 d-flex justify-content-center align-content-center flex-column" [formGroup]="login" (ngSubmit)="submitForm()">
+  <mat-form-field class=" m-auto w-100" appearance="outline">
+    <mat-label>Email*</mat-label>
+    <input matInput placeholder="Ex. hussien415542@gmail.com" type="email" formControlName="email"/>
+  </mat-form-field>
+  <mat-form-field class="m-auto w-100" appearance="outline">
+    <mat-label>password*</mat-label>
+    <input matInput type="password" formControlName="password" />
+  </mat-form-field>
+  <div class="d-flex  align-content-center">
+    <button type="submit" mat-raised-button color="primary" class="w-25" [disabled]="!login.valid">Login</button>
+    <p class="m-0 p-2">new user? <a [routerLink]="['/signup']">signup</a></p>
+  </div>
+</form>
